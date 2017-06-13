@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "React App" && exit 0
