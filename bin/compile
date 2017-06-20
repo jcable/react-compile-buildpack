@@ -1,7 +1,17 @@
 #!/bin/sh
 
-BUILD_DIR=$1
+build_dir=$1
 
-cd "$BUILD_DIR"
+build_dir=$1
+
+env_dir=$3
+if [ -d "$env_dir" ]; then
+  for e in $(ls $env_dir); do
+    echo "$e" && export "$e=$(cat $env_dir/$e)"
+    :
+  done
+fi
+
+cd "$build_dir"
 
 yarn build
