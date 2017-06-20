@@ -2,8 +2,6 @@
 
 build_dir=$1
 
-build_dir=$1
-
 env_dir=$3
 if [ -d "$env_dir" ]; then
   for e in $(ls $env_dir); do
