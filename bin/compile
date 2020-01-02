@@ -10,6 +10,4 @@ if [ -d "$env_dir" ]; then
   done
 fi
 
-cd "$build_dir"
-
-yarn build
+npm run-script build
